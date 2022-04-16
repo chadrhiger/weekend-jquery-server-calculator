@@ -26,6 +26,7 @@ function equalsResult(){
       operator: globalOperator
   }
   // console.log('in equalsResult');
+  
   console.log(newCalculation);
 }
 
@@ -34,5 +35,5 @@ function clearInputs() {
   // console.log('in clearInputs');
   $('.num1Input').val('');
   $('.num2Input').val('');
-
+  $('.recentResult').val('');
 }

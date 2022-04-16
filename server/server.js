@@ -9,11 +9,32 @@ const PORT = 5000;
 
 // Start the server, and listen for requests:
 app.listen(PORT, function() {
-  console.log(`The server is running! Check it out at http://localhost:${PORT}!`);
+  console.log(`The server is risen! http://localhost:${PORT}.`);
 })
 
-// create empty array for num1, num2, and operator
 let calculationObject = [];
 
-let serverMath;
+// function serverMath(){
+
+// }
+
+// define a GET route on server
+app.get('/calculations', (req, res) => {
+  console.log('GET /calculations');
+  res.send(calculationObject)
+})
+
+// define POST route on server
+app.post('/calculations', (req, res) => {
+  console.log('POST /calculations');
+  let newCalculation = req.body;
+  calculationObject.push(newCalculation);
+  res.sendStatus(200);
+})
+
+
+
+
+
+
 
