@@ -25,7 +25,16 @@ function serverMath(newCalculation) {
   console.log(newCalculation);
   let answer;
   if (newCalculation.operator === '+') {
-    answer = Number(newCalculation.numOne) + Number(newCalculation.numTwo)
+    answer = Number(newCalculation.numOne) + Number(newCalculation.numTwo);
+  }
+  else if (newCalculation.operator === '-') {
+    answer = Number(newCalculation.numOne) - Number(newCalculation.numTwo);
+  }
+  else if (newCalculation.operator === '*') {
+    answer = Number(newCalculation.numOne) * Number(newCalculation.numTwo);
+  }
+  else if (newCalculation.operator === '/') {
+    answer = Number(newCalculation.numOne) / Number(newCalculation.numTwo);
   }
   let finalCalc = {
     numOne: newCalculation.numOne,
@@ -33,6 +42,7 @@ function serverMath(newCalculation) {
     numTwo: newCalculation.numTwo,
     answer: answer
   }
+  calculationObjects.push(finalCalc);
   console.log(finalCalc);
 }
 

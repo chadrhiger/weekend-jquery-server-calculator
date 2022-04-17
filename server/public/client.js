@@ -54,17 +54,14 @@ function readCalculation() {
       $('.prevCalculations').empty();
       for (let lastCalc of response) {
         $('.prevCalculations').append(`
-          <li>${lastCalc.numOne} ${lastCalc.operator} ${lastCalc.numTwo} </li>
+          <h1>${lastCalc[lastCalc.length -1]}</h1>
+          <li>${lastCalc.numOne} ${lastCalc.operator} ${lastCalc.numTwo}</li>
         `)
       }
       $('.recentResult').empty();
-      $('.recentResult').append(`
-      <h1>Answer!</h1>
-    `);
     });
 } 
 
-// ANSWER??  <h1>${Number(recentResult)}</h1>
 
 
 // WHATS THAT DO?
