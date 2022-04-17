@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const PORT = 5000
 
 // Start the server, and listen for requests:
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`The server is risen! http://localhost:${PORT}.`);
 })
 
@@ -21,19 +21,22 @@ console.log(calculationObjects);
 // take result and push it into the array with the other inputs
 // if the operator is +, assign the value 
 
-function serverMath(newCalculation){
+function serverMath(newCalculation) {
   console.log(newCalculation);
   let answer;
-  if (calculationObjects.operator = '+'){
-    calculationObjects.numOne + calculationObjects.numTwo;
-    return answer;
+  if (newCalculation.operator === '+') {
+    answer = Number(newCalculation.numOne) + Number(newCalculation.numTwo)
   }
-  // calculationObjects.empty()
-  calculationObjects.push(numOne, operator, numTwo, answer);
+  let finalCalc = {
+    numOne: newCalculation.numOne,
+    operator: newCalculation.operator,
+    numTwo: newCalculation.numTwo,
+    answer: answer
   }
-  console.log(calculationObjects);
-  
-  
+  console.log(finalCalc);
+}
+
+
 
 
 // define a GET route on server
