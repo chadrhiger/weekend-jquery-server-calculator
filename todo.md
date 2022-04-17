@@ -16,7 +16,7 @@
   -[x] create click listener for "=" button that
     -[x] calls the equalsResult function
       -[x] creates an object of inputs (num1, num2, operator) 
-      -[] sends it to the server via a POST route
+      -[x] sends it to the server via a POST route
       -[] calls back the server function that gives us the display
     -[] calls the ?? function to render the display on the DOM
   -[] create a click listener for the clear button that:
@@ -29,7 +29,7 @@
   -[]
   
 
-# back end config
+# back end server config
   -[x] build out server:
     -[x] const express
     -[x] const app
