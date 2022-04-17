@@ -1,9 +1,11 @@
-header {
-  padding: 50px;
-  color: blueviolet;
-}
+
 
 body {
-  text-align: center;
   background-color: azure;
+}
+
+.headerTitle {
+  text-align: center;
+  padding: 50px;
+  color: blueviolet;
 }

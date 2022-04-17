@@ -30,7 +30,6 @@ function equalsClick(){
 }
 
 
-
 // "Renewal" C button clears the inputs 
 function clearInputs() {
   // console.log('in clearInputs');
@@ -76,10 +75,4 @@ function createCalculation(calculation){
   })
 }
 
-// WHATS THAT DO?
-// function appendResult(){
-//   let calcResult = Number(numOne, operator, numTwo, answer).append(`
-//     <p>${'.recentResult'}</p>
-//   `)
 
-// }

@@ -8,7 +8,7 @@ const PORT = 5000
 
 // Start the server, and listen for requests:
 app.listen(PORT, function () {
-  console.log(`The server is risen! http://localhost:${PORT}.`);
+  console.log(`Todd is risen! Server @ http://localhost:${PORT}.`);
 })
 
 let calculationObjects = [];
