@@ -27,7 +27,6 @@ function equalsClick(){
       operator: globalOperator
   }
   createCalculation(newCalculation);
-
 }
 
 
@@ -37,8 +36,6 @@ function clearInputs() {
   // console.log('in clearInputs');
   $('.num1Input').val('');
   $('.num2Input').val('');
-  $('.recentResult').val('');
-  $('.recentResult').val('');
 
 }
 
@@ -51,18 +48,19 @@ function readCalculation() {
     .then(function (response) {
       console.log('the server sent me something!');
       console.log(response);
+      $('.recentResult').empty();
       $('.prevCalculations').empty();
       for (let lastCalc of response) {
-        $('.prevCalculations').append(`
-          <h1>${lastCalc[lastCalc.length -1]}</h1>
-          <li>${lastCalc.numOne} ${lastCalc.operator} ${lastCalc.numTwo}</li>
-        `)
+        $('.prevCalculations').append(`        
+          <li>${lastCalc.numOne} ${lastCalc.operator} ${lastCalc.numTwo} = ${lastCalc.answer}</li>
+        `);
+        $('.recentResult').empty();
+        $('.recentResult').append(`        
+        <h2>${lastCalc.answer}</h2>
+      `);        
       }
-      $('.recentResult').empty();
     });
 } 
-
-
 
 // WHATS THAT DO?
 function createCalculation(calculation){
