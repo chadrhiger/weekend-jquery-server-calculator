@@ -9,8 +9,6 @@ function onReady(){
   $(document).on('click', '.clearButton', clearInputs);
   $('.operatorButton').on('click', assignOperator);
   $(document).on('click', readCalculation);
- 
-
 }
 
 
@@ -66,6 +64,9 @@ function readCalculation() {
     });
 } 
 
+// ANSWER??  <h1>${Number(recentResult)}</h1>
+
+
 // WHATS THAT DO?
 function createCalculation(calculation){
   $.ajax({
@@ -81,6 +82,9 @@ function createCalculation(calculation){
 }
 
 // WHATS THAT DO?
-function appendResult(){
+// function appendResult(){
+//   let calcResult = Number(numOne, operator, numTwo, answer).append(`
+//     <p>${'.recentResult'}</p>
+//   `)
 
-}
+// }

@@ -19,13 +19,22 @@ console.log(calculationObjects);
 // determine which operator is included using if else if
 // empty array
 // take result and push it into the array with the other inputs
-// 
+// if the operator is +, assign the value 
 
 function serverMath(newCalculation){
   console.log(newCalculation);
+  let answer;
+  if (calculationObjects.operator = '+'){
+    calculationObjects.numOne + calculationObjects.numTwo;
+    return answer;
+  }
+  // calculationObjects.empty()
+  calculationObjects.push(numOne, operator, numTwo, answer);
+  }
+  console.log(calculationObjects);
   
   
-}
+
 
 // define a GET route on server
 app.get('/calculations', (req, res) => {
@@ -40,10 +49,3 @@ app.post('/calculations', (req, res) => {
   serverMath(newCalculation);
   res.sendStatus(200);
 })
-
-
-
-
-
-
-
